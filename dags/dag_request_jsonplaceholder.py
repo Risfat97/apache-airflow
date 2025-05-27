@@ -17,6 +17,7 @@ def handle_data(response):
 with DAG(
     dag_id='dag_request_jsonplaceholder',
     default_args=default_args,
+    description='This is a dag with an HTTP operator',
     start_date=datetime(2025, 5, 27),
     schedule='@once'
 ) as dag:
