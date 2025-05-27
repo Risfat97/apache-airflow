@@ -1,5 +1,5 @@
 from datetime import datetime
-from utils.constants import default_args, json_placeholder_baseurl
+from utils.constants import default_args
 
 from airflow import DAG
 from airflow.decorators import task
