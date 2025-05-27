@@ -1,0 +1,18 @@
+[2025-05-26T15:11:01.467+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: first_dag.task1 scheduled__2025-05-26T07:27:00+00:00 [queued]>
+[2025-05-26T15:11:01.475+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: first_dag.task1 scheduled__2025-05-26T07:27:00+00:00 [queued]>
+[2025-05-26T15:11:01.476+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2025-05-26T15:11:01.500+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): task1> on 2025-05-26 07:27:00+00:00
+[2025-05-26T15:11:01.514+0000] {standard_task_runner.py:57} INFO - Started process 4176 to run task
+[2025-05-26T15:11:01.516+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'first_dag', 'task1', 'scheduled__2025-05-26T07:27:00+00:00', '--job-id', '434', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmphmk5u60w']
+[2025-05-26T15:11:01.518+0000] {standard_task_runner.py:85} INFO - Job 434: Subtask task1
+[2025-05-26T15:11:01.535+0000] {logging_mixin.py:151} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-26T15:11:01.574+0000] {task_command.py:415} INFO - Running <TaskInstance: first_dag.task1 scheduled__2025-05-26T07:27:00+00:00 [running]> on host 4ef62d544527
+[2025-05-26T15:11:01.628+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='sirtaf' AIRFLOW_CTX_DAG_ID='first_dag' AIRFLOW_CTX_TASK_ID='task1' AIRFLOW_CTX_EXECUTION_DATE='2025-05-26T07:27:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-26T07:27:00+00:00'
+[2025-05-26T15:11:01.632+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-26T15:11:01.632+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo Hello world, this is the first task!']
+[2025-05-26T15:11:01.642+0000] {subprocess.py:86} INFO - Output:
+[2025-05-26T15:11:01.643+0000] {subprocess.py:93} INFO - Hello world, this is the first task!
+[2025-05-26T15:11:01.643+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-05-26T15:11:01.672+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=first_dag, task_id=task1, execution_date=20250526T072700, start_date=20250526T151101, end_date=20250526T151101
+[2025-05-26T15:11:01.701+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-05-26T15:11:01.742+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
