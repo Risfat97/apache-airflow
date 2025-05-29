@@ -1,7 +1,7 @@
 from datetime import datetime
 from utils.constants import default_args
 
-from airflow import DAG
+from airflow.sdk import DAG
 from airflow.decorators import task
 
 @task(task_id='greeting')
@@ -18,7 +18,7 @@ with DAG(
     dag_id="first_dag_with_python_op",
     default_args=default_args,
     description="This is our the first dag with Python operator",
-    start_date=datetime(2025, 5, 27),
+    start_date=datetime(2025, 5, 29),
     schedule="@once"
 ) as dag:
     task1 = greeting(who="Sirtaf")
